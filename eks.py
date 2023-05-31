@@ -7,7 +7,7 @@ api_client = client.ApiClient()
 #Define Deployment
 deployment = client.V1Deployment(
     metadata = client.V1ObjectMeta(name="my-flask-app"),
-    spec = client.V1DeploymentSoec(
+    spec = client.V1DeploymentSp    ec(
         replicas=1,
         selector=client.V1LabelSelector(
             match_labels={"app": "my-flask-app"}
@@ -21,7 +21,7 @@ deployment = client.V1Deployment(
                     client.V1Container(
                         name = "my-flask-app",
                         image = "346141603601.dkr.ecr.us-east-1.amazonaws.com/kalangi-cloud-native-repo:latest",
-                        ports = client.V1ContainerPort(container_port=5000)
+                        ports = [client.V1ContainerPort(container_port=5000)]
                     )
                 ]
             )
