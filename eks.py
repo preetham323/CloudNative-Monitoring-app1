@@ -2,7 +2,7 @@ from kubernetes import client, config
 
 config.load_kube_config()
 
-api_client = client.Apiclient()
+api_client = client.ApiClient()
 
 #Define Deployment
 deployment = client.V1Deployment(
