@@ -38,9 +38,9 @@ api_instance.create_namespaced_deployment(
 
 # Define service
 service = client.V1Service(
-    metadata = client.V1ObjectMeta(name="my-flask-service")
+    metadata = client.V1ObjectMeta(name="my-flask-service"),
     spec = client.V1ServiceSpec(
-        selector = {"app": "my-flask-app"}
+        selector = {"app": "my-flask-app"},
         ports = [client.V1ServicePort(port=5000)]
     )
 )
