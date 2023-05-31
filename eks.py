@@ -32,7 +32,7 @@ deployment = client.V1Deployment(
 #create Deployment
 api_instance = client.AppsV1Api(api_client)
 api_instance.create_namespaced_deployment(
-    namespace = "default"
+    namespace = "default",
     body = deployment
 )
 
@@ -48,6 +48,6 @@ service = client.V1Service(
 #create the service
 api_instance = client.coreV1Api(api_client)
 api_instance.create_namespaced_service(
-    namespace = "default"
+    namespace = "default",
     body = service
 )
