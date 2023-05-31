@@ -7,7 +7,7 @@ api_client = client.ApiClient()
 #Define Deployment
 deployment = client.V1Deployment(
     metadata = client.V1ObjectMeta(name="my-flask-app"),
-    spec = client.V1DeploymentSp    ec(
+    spec = client.V1DeploymentSpec(
         replicas=1,
         selector=client.V1LabelSelector(
             match_labels={"app": "my-flask-app"}
