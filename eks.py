@@ -23,7 +23,7 @@ deployment = client.V1Deployment(
                 containers=[
                     client.V1Container(
                         name="my-flask-container",
-                        image="346141603601.dkr.ecr.us-east-1.amazonaws.com/kalangi-cloud-native-repo:latest",
+                        image="346141603601.dkr.ecr.us-west-1.amazonaws.com/kalangi-cloud-native-repo:latest",
                         ports=[client.V1ContainerPort(container_port=5000)]
                     )
                 ]
